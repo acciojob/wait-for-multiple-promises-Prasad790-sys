@@ -20,7 +20,7 @@ const outputTable = document.getElementById('output');
 // Start waiting for all promises
 Promise.all(promises).then(results => {
     // Remove loading row
-    loading.parentElement.removeChild(loading);
+    loadingRow.parentElement.removeChild(loadingRow);
     results.forEach(result => {
         const row = document.createElement('tr');
         row.innerHTML = `<td>${result.name}</td><td>${result.time.toFixed(3)}</td>`;
