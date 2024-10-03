@@ -1,6 +1,6 @@
 //your JS code here. If required.
 function createRandomPromise(promiseName) {
-    const timeToResolve = Math.random() * 2 + 1; // Random time between 1 and 3 seconds
+    const timeToResolve = Math.random() * 2 + 1; // Random time betwe
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve({ name: promiseName, time: timeToResolve });
@@ -20,7 +20,7 @@ const outputTable = document.getElementById('output');
 // Start waiting for all promises
 Promise.all(promises).then(results => {
     // Remove loading row
-    loadingRow.parentElement.removeChild(loading);
+    loading.parentElement.removeChild(loading);
     results.forEach(result => {
         const row = document.createElement('tr');
         row.innerHTML = `<td>${result.name}</td><td>${result.time.toFixed(3)}</td>`;
